@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sled &amp; Stay Newsletters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Open+Sans:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night:#050e1d; --navy:#07132a; --card:#0b1d33; --ice:#f0f8ff; --ice-dim:#b4c6d8;
+    --cyan:#00c4e0; --cyan-deep:#0097b2; --line:#0c3346; --rule:#0a2234; --amber:#f5b942;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--night); color:var(--ice); font:400 16px/1.65 'Open Sans','Segoe UI',Roboto,Arial,sans-serif; }
+  ::selection { background:var(--cyan); color:var(--night); }
+  a { color:var(--cyan); text-underline-offset:4px; }
+  a:focus-visible { outline:2px solid var(--cyan); outline-offset:3px; border-radius:6px; }
+  .wrap { max-width:1080px; margin:0 auto; padding:40px 24px 64px; }
+  .logo { width:160px; height:auto; display:block; }
+  .chip { display:inline-block; margin-top:36px; padding:9px 16px; border:1px solid #0791a8; border-radius:9px; background:#06152a;
+          font:700 13px/16px 'JetBrains Mono',Consolas,monospace; letter-spacing:.1em; text-transform:uppercase; color:var(--cyan); }
+  .chip b { color:var(--ice); }
+  h1 { margin:18px 0 0; font:700 clamp(2.4rem,1.6rem + 3vw,3.75rem)/1.02 'Oswald','Arial Narrow',Arial,sans-serif; text-transform:uppercase; letter-spacing:-.01em; }
+  h1 span { color:var(--cyan); }
+  .lead { max-width:64ch; margin:18px 0 0; color:var(--ice-dim); font-size:17px; }
+  h2 { margin:56px 0 0; font:700 28px/1.1 'Oswald','Arial Narrow',Arial,sans-serif; text-transform:uppercase; }
+  .issues { margin-top:22px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .issue { display:flex; flex-direction:column; overflow:hidden; border:1px solid var(--line); border-radius:20px;
+           background:linear-gradient(180deg,var(--card),var(--navy)); text-decoration:none; color:inherit;
+           transition:transform .3s cubic-bezier(.16,1,.3,1), border-color .3s, box-shadow .3s; }
+  .issue:hover { transform:translateY(-4px); border-color:#0791a8; box-shadow:0 18px 40px -20px rgba(0,196,224,.45); }
+  .issue img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
+  .issue .body { padding:20px 20px 22px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .when { font:700 13px/18px 'JetBrains Mono',Consolas,monospace; letter-spacing:.08em; text-transform:uppercase; color:var(--cyan); }
+  .subject { font:700 24px/1.15 'Oswald','Arial Narrow',Arial,sans-serif; text-transform:uppercase; color:#fff; }
+  .pre { color:var(--ice-dim); font-size:15px; }
+  .open { margin-top:auto; padding-top:10px; font:700 15px/1 'Oswald','Arial Narrow',Arial,sans-serif; letter-spacing:.04em; text-transform:uppercase; color:var(--cyan); }
+  table { width:100%; margin-top:22px; border-collapse:separate; border-spacing:0; border:1px solid var(--line); border-radius:16px; overflow:hidden; font-size:15px; }
+  th, td { padding:12px 16px; text-align:left; border-bottom:1px solid var(--rule); vertical-align:top; }
+  th { font:700 13px/18px 'JetBrains Mono',Consolas,monospace; letter-spacing:.08em; text-transform:uppercase; color:var(--cyan); background:#06152a; }
+  tr:last-child td { border-bottom:0; }
+  td.day { font-family:'JetBrains Mono',Consolas,monospace; font-variant-numeric:tabular-nums; color:var(--ice-dim); white-space:nowrap; }
+  tr.news td { background:rgba(0,196,224,.06); }
+  .tag { display:inline-block; padding:1px 7px; border-radius:5px; font:700 12px/18px 'JetBrains Mono',Consolas,monospace; letter-spacing:.06em; text-transform:uppercase; }
+  .tag.n { background:var(--cyan); color:var(--night); }
+  .tag.t { border:1px solid var(--line); color:var(--ice-dim); }
+  .tag.d { background:var(--amber); color:var(--night); }
+  .note { margin-top:14px; color:var(--ice-dim); font-size:14px; }
+  footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--rule); color:var(--ice-dim); font:400 13px/20px 'JetBrains Mono',Consolas,monospace; }
+  @media (max-width:860px) { .issues { grid-template-columns:1fr; } }
+  @media (max-width:620px) {
+    .wrap { padding:28px 16px 48px; }
+    table, thead, tbody, tr, th, td { display:block; }
+    thead { display:none; }
+    tr { border-bottom:1px solid var(--rule); padding:10px 0; }
+    td { border:0; padding:2px 14px; }
+  }
+  @media (prefers-reduced-motion:reduce) { .issue { transition:none; } .issue:hover { transform:none; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <img class="logo" src="img/logo.png" width="160" height="43" alt="Crazy Creek Resort">
+  <p class="chip">Early Bird <b>ends December 20</b></p>
+  <h1>Sled &amp; Stay<br><span>past-guest newsletters</span></h1>
+  <p class="lead">Three newsletters for Crazy Creek's past guests, sent alongside three short text emails from Jason. Each one walks through part of a winter day at the resort and ends with the Early Bird offer and one button to the Early Bird page. Open each one to see it the way a guest would.</p>
+
+  <h2>The newsletters</h2>
+  <div class="issues">
+    <a class="issue" href="n1.html">
+      <img src="img/hero-rider.jpg" width="600" height="338" alt="">
+      <div class="body">
+        <span class="when">N1 · Day 2 · Dec 4 / 5</span>
+        <span class="subject">A sled day at Crazy Creek</span>
+        <span class="pre">Coffee in your cabin, Eagle Pass 3 minutes out, hot pools until 10.</span>
+        <span class="open">Open N1</span>
+      </div>
+    </a>
+    <a class="issue" href="n2.html">
+      <img src="img/hero-cabin.jpg" width="600" height="338" alt="">
+      <div class="body">
+        <span class="when">N2 · Day 6 · Dec 8 / 9</span>
+        <span class="subject">Which cabin fits your crew?</span>
+        <span class="pre">Five cabin types, 4 to 6 riders each. Early Bird ends Dec 20.</span>
+        <span class="open">Open N2</span>
+      </div>
+    </a>
+    <a class="issue" href="n3.html">
+      <img src="img/pools-aerial.jpg" width="600" height="338" alt="">
+      <div class="body">
+        <span class="when">N3 · Day 10 · Dec 12 / 13</span>
+        <span class="subject">After the last run</span>
+        <span class="pre">Trailer parked, gear drying, hot pools until 10. Early Bird ends Dec 20.</span>
+        <span class="open">Open N3</span>
+      </div>
+    </a>
+  </div>
+
+  <h2>The full sequence</h2>
+  <table>
+    <thead><tr><th>Day</th><th>Email</th><th>Subject</th><th>Batch 1 / Batches 2+3</th></tr></thead>
+    <tbody>
+      <tr><td class="day">0</td><td><span class="tag t">Text</span> E1</td><td>Sled &amp; Stay Early Bird (from Jason)</td><td>Dec 2 / Dec 3</td></tr>
+      <tr class="news"><td class="day">2</td><td><span class="tag n">News</span> N1</td><td><a href="n1.html">A sled day at Crazy Creek</a></td><td>Dec 4 / Dec 5</td></tr>
+      <tr><td class="day">4</td><td><span class="tag t">Text</span> E2a / E2b</td><td>Clicked E1: which weekend are you thinking? · Didn't: Park the trailer at your cabin door</td><td>Dec 6 / Dec 7</td></tr>
+      <tr class="news"><td class="day">6</td><td><span class="tag n">News</span> N2</td><td><a href="n2.html">Which cabin fits your crew?</a></td><td>Dec 8 / Dec 9</td></tr>
+      <tr><td class="day">8</td><td><span class="tag t">Text</span> E3</td><td>the part of a sled trip people remember</td><td>Dec 10 / Dec 11</td></tr>
+      <tr class="news"><td class="day">10</td><td><span class="tag n">News</span> N3</td><td><a href="n3.html">After the last run</a></td><td>Dec 12 / Dec 13</td></tr>
+      <tr><td class="day">—</td><td><span class="tag d">Deadline</span></td><td>3 days left on Early Bird · resend to non-openers "Early Bird ends tomorrow" · last day</td><td>Dec 17 · Dec 19 · Dec 20</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Anyone who signs up on the Early Bird page is removed from the list automatically and gets the code emails instead. Preview only: links in these copies point to the current Sled &amp; Stay page.</p>
+
+  <footer>Crazy Creek Resort · Sled &amp; Stay Early Bird 2026 · Review copy, not for distribution</footer>
+</main>
+</body>
+</html>
