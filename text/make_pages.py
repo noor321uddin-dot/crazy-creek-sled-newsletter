@@ -5,10 +5,10 @@ HERE = Path(__file__).parent
 FROM = "Jason at Crazy Creek &lt;jason@crazycreekresort.com&gt;"
 # (email file, label, subject, preview text, kind, day, send dates, who gets it)
 EMAILS = [
-    ("e1", "E1", "Sled &amp; Stay Early Bird (from Jason)", "Early Bird pricing on Sled &amp; Stay", "Text", "Day 0", "Dec 2 / Dec 3", "Everyone"),
-    ("e2a", "E2a", "which weekend are you thinking?", "I can tell you what's still open", "Text", "Day 4", "Dec 6 / Dec 7", "People who clicked E1"),
-    ("e2b", "E2b", "Park the trailer at your cabin door", "Sled &amp; Stay, up to 30% off until Dec 20", "Designed", "Day 4", "Dec 6 / Dec 7", "People who didn't click E1"),
-    ("e3", "E3", "the part of a sled trip people remember", "It happens after the ride", "Text", "Day 8", "Dec 10 / Dec 11", "Everyone still on the list"),
+    ("e1", "E1", "Sled &amp; Stay Early Bird (from Jason)", "Early Bird pricing on Sled &amp; Stay", "Text", "Day 0", "Dec 2 / Dec 4", "Everyone"),
+    ("e2a", "E2a", "which weekend are you thinking?", "I can tell you what's still open", "Text", "Day 4", "Dec 6 / Dec 8", "People who clicked E1"),
+    ("e2b", "E2b", "Park the trailer at your cabin door", "Sled &amp; Stay, up to 30% off until Dec 20", "Designed", "Day 4", "Dec 6 / Dec 8", "People who didn't click E1"),
+    ("e3", "E3", "the part of a sled trip people remember", "It happens after the ride", "Text", "Day 8", "Dec 10 / Dec 12", "Everyone still on the list"),
     ("dec17", "Dec 17", "3 days left on Early Bird", "Ends Sunday, December 20", "Designed", "Deadline", "Thu Dec 17", "Everyone still on the list"),
     ("dec17", "Dec 19", "Early Bird ends tomorrow", "Last chance to save up to 30%", "Designed", "Deadline", "Sat Dec 19", "People who didn't open Dec 17"),
     ("dec20", "Dec 20", "last day", "Early Bird ends tonight", "Text", "Deadline", "Sun Dec 20", "Everyone still on the list"),
