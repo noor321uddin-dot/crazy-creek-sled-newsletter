@@ -10,7 +10,7 @@ EMAILS = [
     ("e2b", "E2b", "Park the trailer at your cabin door", "Sled &amp; Stay, up to 30% off until Dec 20", "Designed", "Day 4", "Dec 6 / Dec 8", "People who didn't click E1"),
     ("e3", "E3", "the part of a sled trip people remember", "It happens after the ride", "Text", "Day 8", "Dec 10 / Dec 12", "Everyone still on the list"),
     ("dec17", "Dec 17", "3 days left on Early Bird", "Ends Sunday, December 20", "Designed", "Deadline", "Thu Dec 17", "Everyone still on the list"),
-    ("dec17", "Dec 19", "Early Bird ends tomorrow", "Last chance to save up to 30%", "Designed", "Deadline", "Sat Dec 19", "People who didn't open Dec 17"),
+    ("dec19", "Dec 19", "Early Bird ends tomorrow", "Last chance for Early Bird pricing", "Designed", "Deadline", "Sat Dec 19", "People who didn't open Dec 17"),
     ("dec20", "Dec 20", "last day", "Early Bird ends tonight", "Text", "Deadline", "Sun Dec 20", "Everyone still on the list"),
 ]
 
@@ -69,7 +69,7 @@ slugs = ["dec19" if e[1] == "Dec 19" else e[0] for e in EMAILS]
 for i, (f, code, subj, pre, kind, day, dates, who) in enumerate(EMAILS):
     prev = f'<a href="{slugs[i-1]}.html">&larr; {EMAILS[i-1][1]}</a>' if i else "<span></span>"
     nxt = f'<a href="{slugs[i+1]}.html">{EMAILS[i+1][1]} &rarr;</a>' if i < len(EMAILS) - 1 else "<span></span>"
-    extra = '<p class="note">Same body as Dec 17, with a new subject. Goes only to people who did not open Dec 17.</p>' if code == "Dec 19" else ""
+    extra = '<p class="note">Same layout as Dec 17, reworded for the day before the deadline. Goes only to people who did not open Dec 17.</p>' if code == "Dec 19" else ""
     html = head(f"{code}: {subj}") + f"""
 <h1>{code}<br><span>{subj}</span></h1>
 <p class="lead">{tag(kind)} &nbsp;{day} &middot; {dates} &middot; {who}</p>
